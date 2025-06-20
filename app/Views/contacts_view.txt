@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Daftar Kontak</title>
+</head>
+
+<body>
+    <h1>Daftar Kontak</h1>
+    <?php if (!empty($contacts)): ?>
+        <ul>
+            <?php foreach ($contacts as $contact): ?>
+                <li><?= $contact['name'] ?> - <?= $contact['email'] ?>: <?= $contact['message'] ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php else: ?>
+        <p>Tidak ada data kontak.</p>
+    <?php endif; ?>
+    <p><a href="<?= base_url('contact') ?>">Kirim Pesan Baru</a></p>
+</body>
+
+</html>
